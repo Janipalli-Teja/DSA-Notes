@@ -1,0 +1,12 @@
+Strings
+strings are sequences of characters that are used to store words and text. They are also used to store data, such as numbers and other types of information in the form of text. Strings are provided by <string> header file in the form of std::string class.
+
+creating a string 
+
+   string str_name;
+   
+   string str = "Some Text here";
+
+   
+string methods - to read
+

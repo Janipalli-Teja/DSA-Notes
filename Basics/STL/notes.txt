@@ -1,0 +1,234 @@
+The C++ Standard Template Library (STL) is a set of template classes and functions that provides the implementation of common data structures and algorithms such as lists, stacks, arrays, sorting, searching, etc. It also provides the iterators and functors which makes it easier to work with algorithms and containers.
+
+Components of STL
+
+1.Containers
+2.Algorithms
+3.Iterators
+4.Functors
+
+
+1. Containers -------------------------------------------------------->
+  sequential
+   |_Arrays
+   |_Vectors
+   |_Deque
+   |_Lists
+   |_Forward lists
+ Non-sequential
+   |_stack
+
+
+  1) Arrays: The STL array is an implementation of a compile time non-resizable array. It contains various method for common array operations.
+  2) Vector: An STL vector can be defined as the dynamic sized array which can be resized automatically when new elements are added or removed.
+
+    function in _Vectors
+
+    .size() ->  -> total space of vector occupaid
+    .capacity() -> ->total space of vector
+    .push_back() -> add an element to the last index
+    .pop_back()  -> pops last element
+    .emplace_back()
+    .at() or []  ->prints element at particular index
+    .front()     ->prints first element
+    .back()      ->prints last element
+    .erase(start,end) ->deletes from start index to end-1 index in vector
+         vec.arr(2,4) -> wrong way
+         vec.arr(vec.begin()+2,vec.begin()+5);
+    .insert(position,value)  ->inserts element at specific value
+    .clear -> empties the vector
+    .empty -> return bool value by checking is vector empty or not
+
+    vector Iterator 
+    .begin()  -> points towards left first element(0th index)
+    .end()    -> points towards right garbage element(nth index not n-1)
+    .rbegin() -> points towards last element(n-1th index)
+    .rend()   -> points towards left garbage element
+
+---------------------------------------------------
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+int main(){
+    vector<int> arr={4,1,4,2,2,2,4,1,1};
+    
+    if(arr.begin()==arr.rend().base()){
+        cout<<"both are same"<<endl;
+
+    }
+    return 0;
+}
+---------------------------------------------------
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+int main(){
+    vector<int> arr={8,6,4,32,5,1};
+    
+    vector<int>::iterator it;
+    for(it=arr.begin();it!=arr.end();it++){
+        cout<<*(it)<<endl;
+    }
+    return 0;
+}
+
+
+---------------------------------------------------
+The auto keyword in C++ tells the compiler to automatically deduce the type of a variable from its initializer.
+
+intead of this 
+
+vector<int>::iterator it;
+for (it = arr.begin(); it != arr.end(); it++) {
+    cout << *it << endl;
+}
+
+we can write 
+
+for (auto it = arr.begin(); it != arr.end(); it++) {
+    cout << *it << endl;
+}
+
+
+more optimized 
+
+for (auto x : arr) {
+    cout << x << endl;
+}
+
+
+---------------------------------------------------
+
+  3) List -> List container stores data in non-contiguous memory unlike vectors and only provide sequential access to the stored data. It basically implements(acts as) the doubly linked list.
+
+  Methods in lists
+
+  .push_back()  -> add element at last of list
+  .push_front() -> adds element at first of list
+  .emplace_back() ->
+  .emplace_front() -> 
+  .pop_back()  -> last element poped
+  .pop_front()  -> first element poped
+
+
+   4)Deque ->Stands for Double Ended QUEue,it is a special type of queue where insertion and deletion operations are possible at both the ends in constant time complexity.
+   Note: Deque != dequeue 
+   dequeue stands for removing an item from queue
+
+
+   methods in Deque
+
+
+   .push_back()  -> add element at last of deque
+   .push_front() -> adds element at first of deque
+   .emplace_back() ->
+   .emplace_front() -> 
+   .pop_back()  -> last element poped
+   .pop_front()  -> first element poped
+
+   the deque and list are almost similar but 
+
+   list -> implements DLL , cannot access data through index
+   deque ->implements Dynamic arrays, can access data through index
+
+---------------------------------------------------
+
+Pairs -> pair is used to combine together two values that may be of different data types or same data types as a single unit. The first element is stored as a data member with name 'first' and the second element as 'second'.
+
+     pair<datatype,datatype> var={first,second};
+
+     accessing in pairs 
+
+      var.first;
+      var.second;
+
+---------------------------------------------------
+
+difference between 
+           push_back|push_front          and          emplace_back|emplace_front
+
+
+    example :
+     
+    vector<pair<int,int>> vec;
+
+    vec.push_back({2,3});  //inserts the copy of objects that are already created  
+
+    vec.emplace_back(2,3); //in-place objects create 
+
+
+
+---------------------------------------------------
+
+Non-sequential containers in STL 
+
+1. Stack -> LIFO, This is done by inserting and deleting elements at only one end of the stack which is generally called the top of the stack.
+    
+    methods in stack
+      .push()
+      .pop()
+      .emplace
+      .size()
+      .empty()
+      .top()
+      .swap()
+
+
+
+2. Queue -> FIFO ,queue container follows the FIFO (First In First Out) order of insertion and deletion. According to it, the elements that are inserted first should be removed first. This is possible by inserting elements at one end (called back) and deleting them from the other end (called front) of the data structure.
+
+    methods in queue
+      .push()
+      .pop()
+      .emplace
+      .size()
+      .empty()
+      .front()
+      .swap()
+
+
+3. Priority Queue -> priority queue is a type of queue in which there is some priority assigned to the elements. According to this priority, elements are removed from the queue. By default, the value of the element being inserted is considered as priority. Higher its value, higher its priority.
+
+    methods in pq
+      .push()
+      .pop()
+      .emplace
+      .size()
+      .empty()
+      .top()
+      .swap()
+
+---------------------------------------------------
+
+4. Map ->maps are associative containers that store data in the form of key value pairs sorted on the basis of keys. No two mapped values can have the same keys. By default, it stores data in ascending order of the keys, 
+    m[key]=value;
+
+    methods in Map 
+      .size()
+      .count()
+      .insert()
+      .emplace
+      .empty()
+      .erase()
+      .find()
+
+5. Multimap - > same as map , but can store duplicates of keys
+
+6. Unordered map -> stores the key value pairs in random addresses
+
+7. Sets -> similar to map (no duplicates, unique ,)
+
+
+
+
+
+
+
+ 
+
+

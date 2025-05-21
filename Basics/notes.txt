@@ -1,0 +1,100 @@
+g++ file.cpp  --compilation 
+
+--execution
+  |
+./a.out  -for linux|mac
+./a.exe  -for windows
+
+----------------------------------------------------------------------------
+
+cout<<"for new line "<<endl;
+cout<<"for new line "<<"\n";
+
+
+//this is comment
+
+/*
+this
+is multiline
+comment */
+
+-------------------------------------------------------------
+Variables 
+
+primitive data types
+int -4bytes
+float -4bytes
+char  -1byte
+bool -1byte
+double -8bytes(floating numbers)
+
+
+-------------------------------------------------------------
+Type Casting 
+1.type conversion(implicit   --done by computer) (smalldata type ->bigdata type)
+int main(){
+    char var='a';
+    int val=var;
+    cout<<val<<endl;
+    return 0;
+}
+
+
+2.type casting(explicit   -done by user)(big datatype ->small datatype)
+
+int main(){
+    double num=23.2321;
+    int num1=(int)num;
+    cout<<num1<<endl;
+    return 0;
+}
+
+
+
+---------------------------------------------------------------------------------
+
+Taking input in C++
+
+int main(){
+    int age;
+    cout<<"enter your age : ";
+    cin>>age;
+
+    cout<<"your age is "<<age<<endl;
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------
+
+Types of operators
+1.Arithmetic( + , - , * , / , % )
+2.Unary (- , + , ! , ~ , & , * , ++ , --)
+3.Relational( == , != , > , < , >= , <= )
+4.Bitwise( & , | , << , >> , ^ )
+5.Logical (&& , || , !)
+6.Ternary(? ,  :)
+
+-------------------------------------------------------------------------------
+
+int main(){
+    char letter;
+    cout<<"enter a character : ";
+    cin>>letter;
+
+    int val=(int)letter;
+    if(val>64 && val<91){
+        cout<<"it is upper case"<<endl;
+    }
+    else if( val>96 && val<123){
+        cout<<"it is smaller case"<<endl;
+    }
+    else{
+        cout<<"invalid character"<<endl;
+    }
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------
+
