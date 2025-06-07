@@ -208,6 +208,8 @@ Non-sequential containers in STL
 4. Map ->maps are associative containers that store data in the form of key value pairs sorted on the basis of keys. No two mapped values can have the same keys. By default, it stores data in ascending order of the keys, 
     m[key]=value;
 
+    access like first , second
+
     methods in Map 
       .size()
       .count()
@@ -225,6 +227,7 @@ Non-sequential containers in STL
 
 
 
+------------------------------------------------------------------------------------
 
 
 
