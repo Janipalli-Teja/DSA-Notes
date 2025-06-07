@@ -11,7 +11,6 @@ int max_profit(vector<int>& vec){
             maxp=max(maxp,vec[i]-buy);
         }
         buy=min(buy,vec[i]);
-
     }
     return maxp;
 }
