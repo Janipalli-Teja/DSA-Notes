@@ -1,0 +1,18 @@
+Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve. Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.
+
+printing n from backwards
+#include<iostream>
+using namespace std;
+
+int fun(int n){
+    if(n!=0){
+        cout<<n<<" ";
+        fun(n-1);
+    }
+    return 0;
+}
+int main(){
+    fun(10000);
+    return 0;
+}
+
