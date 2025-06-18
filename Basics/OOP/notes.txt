@@ -1,0 +1,18 @@
+inheritance 
+
+single 
+
+              A
+              |
+              |
+              | 
+              B
+
+muliple
+
+             A       B
+             \      /
+              \    /
+               \  /
+                \/
+                C
