@@ -1,0 +1,10 @@
+Node* newNode = new Node(data);
+
+
+| Part             | Meaning                                                                                                                                                                   |
+| :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Node`           | This is the **class name** (or type) you're working with.                                                                                                                 |
+| `*newNode`       | Declares a **pointer to a `Node` object** — meaning `newNode` will hold the address of a `Node` object.                                                                   |
+| `new Node(data)` | **Creates a new `Node` object on the heap** by calling the constructor `Node(int data)` with the provided value. Returns a pointer (`Node*`) to the newly created object. |
+
+And then the returned address is stored in newNode.
