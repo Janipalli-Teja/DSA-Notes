@@ -1,5 +1,8 @@
-Node* newNode = new Node(data);
+Defining Nodes of a linkedlist
 
+way1 ----------------
+
+Node* newNode = new Node(data);
 
 | Part             | Meaning                                                                                                                                                                   |
 | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -8,3 +11,33 @@ Node* newNode = new Node(data);
 | `new Node(data)` | **Creates a new `Node` object on the heap** by calling the constructor `Node(int data)` with the provided value. Returns a pointer (`Node*`) to the newly created object. |
 
 And then the returned address is stored in newNode.
+
+what it does ..
+It creates a Node object on the heap using new.
+Its lifetime continues until you explicitly delete it with delete.
+The object persists even after the function exits, since you have a pointer to it.
+
+way2 ----------------
+Node newNode(val); // this is static and the data will erased once the scope ends
+
+what is does..
+It creates a Node object on the stack.
+Its lifetime is limited to the scope (usually a function or block) where it’s declared.
+When the function exits, this object is automatically destroyed.
+
+
+Why does a linked list need heap allocation?
+In a linked list:
+You typically create new nodes dynamically as the list grows or shrinks during program execution.
+The number of nodes isn’t known at compile time.
+If you create nodes on the stack, they will be destroyed as soon as their scope ends, breaking your linked list.
+Heap allocation ensures nodes remain alive until you manually delete them.
+
+
+
+linkedlist 
+
+1.SLL
+2.DLL
+3.CLL 
+
