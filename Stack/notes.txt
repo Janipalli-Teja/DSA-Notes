@@ -1,0 +1,10 @@
+Stack
+
+LIFO- Last in first out
+
+functions used -> pop() , top() , push().
+
+pop() -> deletes top element in the Stack
+top() ->returns top element in the Stack
+push() -> add an element to the top of Stack
+
