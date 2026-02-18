@@ -1,0 +1,5 @@
+graphs are non-linear data structures that are used to represent the relationships between various objects. A graph is defined as a collection of vertices and edges
+
+There are two primary ways to implement or represent graph data structures in C++:
+1.Using Adjacency Matrix
+2.Using Adjacency List

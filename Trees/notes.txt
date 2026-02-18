@@ -1,0 +1,29 @@
+Trees 
+
+1.Trees are useful for storing data that naturally forms a hierarchy.
+2.File systems on computers are structured as trees, with folders containing subfolders and files.
+3.The DOM (Document Object Model) of an HTML page is a tree:The <html> tag is the root.<head> and <body> are its children.These tags can have their own child nodes, forming a hierarchical structure.
+
+
+
+Types of Tree Data Structures :
+
+Binary Tree:
+Each node can have a maximum of two children.
+
+Full Binary Tree – every node has either 0 or 2 children.
+Complete Binary Tree – all levels are fully filled except possibly the last, which is filled from left to right.
+Balanced Binary Tree – height difference between left and right subtrees of every node is minimal.
+
+Ternary Tree:
+Each node can have at most three children, often labeled as left, middle, and right.
+
+
+
+Properties of Tree Data Structure:
+Number of edges: An edge is the connection between two nodes. A tree with N nodes will always have N - 1 edges. There is exactly one path from any node to any other node in the tree.
+Depth of a node: The depth of a node is the length of the path from the root to that node. Each edge in the path adds 1 unit to the length. Equivalently, it is the number of edges from the root to the node.
+Height of the tree: The height of the tree is the length of the longest path from the root to any leaf node.
+Degree of a node: The degree of a node is the number of subtrees attached to it (i.e., the number of children it has).
+A leaf node has a degree of 0.
+The degree of the tree is the maximum degree among all nodes in the tree.
